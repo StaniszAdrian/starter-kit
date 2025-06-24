@@ -1,0 +1,42 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomersList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="customersPage" title="{i18n>title}" showNavButton="false" showFooter="true">
+        <Table id="customersTable" items="{path: '/Customers', parameters:{select: 'CompanyName,Country,Region,CustomerID'}}" >
+            <columns>
+                <Column id="companyNameColumn">
+                    <Label text="{i18n>companyName}"/>
+                </Column>
+                <Column id="customerCountry">
+                    <Label text="{i18n>customerCountry}"/>
+                </Column>
+                <Column id="regionColumn">
+                    <Label text="{i18n>customerRegion}"/>
+                </Column>
+                <Column id="customerIdColumn">
+                    <Label text="{i18n>customerId}"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onCustomerPress" id="CustomerDetails">
+                    <Text text="{CompanyName}"/>
+                    <Text text="{=${Country} === 'USA' ? 'United States of America' : ${Country}}"/>
+                    <Text text="{Region}"/>
+                    <Text text="{CustomerID}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <footer>
+        <Toolbar>
+                <Input id="companyNameFilterInput" submit="setCompanyFilter" visible="true" width="10%"/>  
+
+                <ToolbarSpacer  />
+                <Button id="sortingByCountryButton" press="onSortByCountry" icon="https://static-00.iconduck.com/assets.00/sort-icon-2041x2048-seg5v8ar.png" text="By Countries"/>
+                <Button id="sortingByCompanyButton" press="onSortByCompanyName" icon="https://static-00.iconduck.com/assets.00/sort-icon-2041x2048-seg5v8ar.png" text=" By Companies Name"/>
+                <Button id="naviToMasterButton" text="Navigate to Master" press="navigate"/>
+                <Button id="excelButton" text="Import data to excel" press="onPressGenerateExcelReport"/>
+                <Button id="newCustomerButton" text="Create new Customer" press="onCreatePress"/>
+        </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

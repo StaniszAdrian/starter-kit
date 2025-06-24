@@ -1,0 +1,33 @@
+<mvc:View xmlns:table="sap.ui.mdc.table" controllerName="stk.starterkit.controller.ExpertsList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="expertsPage" title="{i18n>title}">
+    <Table id="expertsTable" items="{path: '/Employees', parameters:{expand: 'Orders'}}">
+        <columns>
+            <Column id="nameColumn">
+                <Text text="FullName"/>        
+            </Column>
+            <Column id="roleColumn">
+                <Text text="Role"/>        
+            </Column>
+            <Column id="ordersColumn">
+                <Text text="Orders"/>        
+            </Column>
+            <Column id="actionsColumn">
+                <Text text="Actions"/>        
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <Text text="{=${FirstName} + ' '+ ${LastName}}"/>
+                <Text text="{Title}"/>
+                <Text text="{path: 'Orders', formatter: '.formatter.countOrders'}"/>
+                <FlexBox>
+                    <Button type="Accept" text="Motivate" press="onMotivate" class="greenBackground"/>
+                    <Button type="Critical" text="Fire"/>
+                </FlexBox>
+            </ColumnListItem>
+        </items>
+    </Table>
+    </Page>
+</mvc:View>

@@ -1,0 +1,12 @@
+/* Enter your custom styles here */
+.pinkBackground{
+    background-color: pink;
+}
+
+.blueText tr:hover span{
+    color: #00f !important;
+}
+
+.greenBackground .sapMBtnInner{
+    background-color: #d6f99f !important;
+}

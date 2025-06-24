@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="contactDetails" titleAlignment="Center" icon="https://img.icons8.com/m_outlined/512/FFFFFF/info.png" title="{i18n>lblContact}">
+    <VBox>
+    <Text text="Contact Person: {ContactName}"/>
+    <Text text="Telephone Number: {Phone}"/>
+    <Text text="Address: {Address}"/>
+    <Text text="Fax: {Fax}"/>
+    </VBox>
+    <HBox justifyContent="End">
+    <Button icon="https://img.icons8.com/m_outlined/512/FFFFFF/info.png" text="Close" type="Neutral" press="onPressContactClose"/>
+    </HBox>
+    </Dialog>
+</core:FragmentDefinition>

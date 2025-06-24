@@ -1,0 +1,19 @@
+<mvc:View controllerName="stk.starterkit.controller.CreateCustomer"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="CreateCustomerPage" title="{i18n>title}" >
+        <VBox class="sapUiSmallMargin">
+            <HBox justifyContent="Center" alignItems="Center">  
+                <Text text="Customer ID:" width="150px"/>
+                <Input id="CustomerID"/>
+            </HBox>
+            <HBox justifyContent="Center" alignItems="Center">
+                <Text text="Customer Name:" width="150px"/>
+                <Input id="CustomerName"/>
+            </HBox>
+            <HBox justifyContent="Center">
+                <Button text="Create" type="Success" press="onCreatePress" class="sapUiMediumMarginTopBottom" />
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>

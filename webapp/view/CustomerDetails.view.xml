@@ -1,0 +1,46 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomerDetails"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="customerDetailsPage" title="{CompanyName}" titleAlignment="Center"
+    showNavButton="true" navButtonPress="onNavButtonPress">
+    <HBox justifyContent="End" alignItems="Stretch">
+    <Button text="Contact details" class="sapUiSmallMarginEnd" press="onPressContactButton"/>
+    <Button text="Contact details2" class="sapUiSmallMarginEnd"/>
+    <Button text="Contact details3" class="sapUiSmallMarginEnd"/>
+    </HBox>
+    <Table id="CustomerDetailsTable" items="{path: 'Orders'}">
+        <columns>
+            <Column>
+                <Label text="{i18n>order}"/>
+            </Column>
+            <Column>
+                <Label text="{i18n>orderDate}"/>
+            </Column>
+            <Column>
+                <Label text="{i18n>shippedDate}"/>
+            </Column>
+            <Column>
+                <Label text="{i18n>destination}"/>
+            </Column>
+            <Column>
+                <Label text="{i18n>freight}"/>
+            </Column>
+            <Column>
+                <Label text="{i18n>orderBy}"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+            <Text text="{OrderID}"/>
+            <Text text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style:'medium'}}"/>
+            <Text text="{path: 'ShippedDate', type:'sap.ui.model.type.DateTime', formatOptions:{style: 'medium'}}"/>
+            <Text text="{Customer/CompanyName}"/>
+            <Text text="{Freight}"/>
+            <Text text="{parts: [{path: 'Employee/FirstName'}, {path: 'Employee/LastName'}], formatter: '.formatter.formatName'}"/>
+        </ColumnListItem>
+        </items>   
+    </Table>
+    
+    </Page>
+</mvc:View>

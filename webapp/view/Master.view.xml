@@ -1,0 +1,24 @@
+<mvc:View controllerName="stk.starterkit.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="MasterPage" title="{i18n>title}">
+    <Bar>
+    <contentRight>
+    <Button id="naviToCustomerButton" text="Navigate to Customers" press="navigate" />
+    <Button id="naviToEmployees" text="Navigate to Empolee" press="navigateToExperts"/>
+    </contentRight>
+    </Bar>
+    <Carousel id="losowa_nazwa" height= "50%" arrowsPlacement="PageIndicator" loop="true" class="pinkBackground">
+        <pages>
+            <Image width="50%" height="100%" id="imagexd" src="https://cdn.pixabay.com/photo/2019/11/27/12/24/meme-4656855_640.jpg"/>
+            <Image width="50%" height="100%" id="imagexd2" src="https://cdn.pixabay.com/photo/2019/08/31/11/09/meme-4443243_640.jpg"/>
+            <Image width="50%" height="100%" id="imagexd3" src="https://cdn.pixabay.com/photo/2025/05/31/20/23/trees-9634157_640.jpg"/>
+            <Image width="50%" height="100%" id="imagexd4" src="https://cdn.pixabay.com/photo/2025/05/17/16/56/bunny-9605962_640.jpg"/>
+            <Image width="50%" height="100%" id="imagexd5" src="https://cdn.pixabay.com/photo/2025/05/25/14/49/lion-9621594_640.jpg"/>
+        </pages>
+        <customLayout>
+            <CarouselLayout id="Cl" visiblePagesCount="1"/>
+        </customLayout>
+        </Carousel>
+    </Page>
+</mvc:View>
