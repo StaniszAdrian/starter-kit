@@ -73,10 +73,10 @@
           "useBatch": "false"
         }
       },
-      "CustomersProperties":{
+      "CustomersProperties": {
         "type": "sap.ui.model.json.JSONModel"
       },
-      "EmployeesProperties":{
+      "EmployeesProperties": {
         "type": "sap.ui.model.json.JSONModel"
       }
     },
@@ -124,7 +124,9 @@
         {
           "name": "RouteExpertsList",
           "pattern": "ExpertsList",
-          "target":["TargetExpertsList"]
+          "target": [
+            "TargetExpertsList"
+          ]
         },
         {
           "name": "RouteMaster2",
@@ -140,7 +142,6 @@
             "TargetMaster"
           ]
         }
-        
       ],
       "targets": {
         "TargetMaster": {
@@ -155,11 +156,11 @@
           "id": "CustomerDetails",
           "name": "CustomerDetails"
         },
-        "TargetCreateCustomer":{
+        "TargetCreateCustomer": {
           "id": "CreateCustomer",
           "name": "CreateCustomer"
         },
-        "TargetExpertsList":{
+        "TargetExpertsList": {
           "id": "ExpertsList",
           "name": "ExpertsList",
           "viewName": "ExpertsList",
@@ -176,5 +177,9 @@
       "id": "App",
       "async": true
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "stkstarterkit"
   }
 }
